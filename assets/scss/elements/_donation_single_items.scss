@@ -1,0 +1,223 @@
+// Dontion Single Items/Content Start header
+.donation-single-items {
+    margin-bottom: 50px;
+    .bg-wrapper {
+        overflow: hidden;
+        border-radius: 10px;
+        &.style-01 {
+            margin-top: 30px;
+        }
+        .donation-bg {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 600px;
+            border-radius: 10px;
+            position: relative;
+            transition: .7s all ease;
+            &.style-01 {
+                &::before {
+                    content: none;
+                }
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: transparent linear-gradient(180deg, #04072E00 0%, #04072E 100%);
+                border-radius: 10px;
+            }
+            .content {
+                position: absolute;
+                bottom: 20px;
+                padding: 0px 30px;
+                width: 100%;
+            }
+        }
+        .donation-bg-02 {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 430px;
+            transition: .7s all ease;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .content {
+        margin-top: 25px;
+        .author-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            .thumb {
+                margin-right: 20px;
+                img {
+                    margin-right: 10px;
+                }
+                .author-name {
+                    font-size: 14px;
+                    line-height: 28px;
+                    font-family: var(--body-font);
+                    font-weight: 400;
+                    color: #505050;
+                }
+            }
+            .date {
+                i {
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+                span {
+                    font-size: 14px;
+                    line-height: 28px;
+                    font-family: var(--body-font);
+                    font-weight: 400;
+                    color: #505050;  
+                }
+            }
+        }
+        .title {
+            font-size: 40px;
+            line-height: 48px;
+            font-family: var(--heading-font);
+            font-weight: 600;
+            margin-bottom: 28px;
+            cursor: pointer;
+            transition: .7s all ease;
+            &:hover {
+                color: var(--main-color-one);
+            }
+        }
+        .subtitle {
+            font-size: 20px;
+            line-height: 32px;
+            font-family: var(--body-font);
+            font-weight: 700;
+            color: var(--heading-color);
+            border-left: 4px solid var(--main-color-one);
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+        .description {
+            font-size: 16px;
+            line-height: 28px;
+            font-family: var(--body-font);
+            font-weight: 400;
+            color: #505050;
+        }
+    }
+}
+
+
+.donation-content-section {
+    .donate-programm {
+        .content {
+            .subtitle {
+                font-size: 32px;
+                line-height: 42px;
+                font-family: var(--heading-font);
+                font-weight: 600;
+                color: var(--heading-color);
+                border-left: 4px solid var(--main-color-one);
+                padding-left: 10px;
+                margin-bottom: 20px;
+            }
+            .description {
+                font-size: 18px;
+                line-height: 28px;
+                font-family: var(--body-font);
+                font-weight: 500;
+                color: #4F4F6B;
+                &.style-01 {
+                    max-width: 520px; 
+                }
+            }
+            .notice {
+                display: flex;
+                align-items: center;
+                background: #FEEDF0;
+                border: 1px solid rgba(204, 204, 204, 0.5);
+                border-radius: 10px;
+                padding: 5px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                .icon {
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    background: var(--main-color-one);
+                    border-radius: 10px;
+                    font-size: 35px;
+                    color: #fff;
+                    margin-right: 24px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-family: var(--body-font);
+                    font-weight: 400;
+                    color: #505050;
+                    margin: 0;
+                    span {
+                        color: var(--heading-color);
+                    }
+                }
+            }
+            .amount {
+                display: flex;
+                .btn-wrapper {
+                    margin-bottom: 40px;
+                    margin-top: 15px;
+                    .price-btn {
+                        border: 1px solid rgba(204, 204, 204, 0.5);
+                        background: #fff;
+                        padding: 10px 22px;
+                        border-radius: 5px;
+                        margin-right: 20px;
+                        font-size: 24px;
+                        line-height: 30px;
+                        font-weight: 700;
+                        font-family: var(--heading-font);
+                        color: var(--heading-color);
+                        transition: .7s all ease;
+                        &.style-01 {
+                            font-size: 16px;
+                            line-height: 21px;
+                            font-weight: 400;
+                            font-family: var(--heading-font);
+                            color: #AAAAAA;
+                            padding: 15px 22px;
+                        }
+                        &:hover {
+                            border-color: var(--main-color-one);
+                            color: var(--main-color-one);
+                        }
+                    }
+                }
+                .form-group {
+                    .form-control {
+                        width: 160px;
+                        height: 60px;
+                        &::placeholder {
+                            font-size: 16px;
+                            line-height: 21px;
+                            font-weight: 400;
+                            font-family: var(--heading-font);
+                            color: #AAAAAA;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

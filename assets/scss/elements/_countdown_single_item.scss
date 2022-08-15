@@ -1,0 +1,45 @@
+// Coundown Single Item
+.counter-single-item {
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    &.style-01 {
+        left: 50px;
+    }
+    &.style-02 {
+        bottom: 15px;
+    }
+    .counter-item {
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        padding-top: 15px;
+        background-color: transparent;
+        margin-right: 15px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+        span {
+            text-align: center;
+            display: block;
+            line-height: 55px;
+            font-family: var(--heading-font);
+            font-size: 40px;
+            font-weight: 700;
+            padding-bottom: 14px;
+            color: #fff;
+        }
+        h6 {
+            color: var(--heading-color);
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 28px;
+            background: #fff;
+            padding: 8px;
+            border-radius: 0px 0px 5px 5px;
+        }
+    }
+}

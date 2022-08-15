@@ -1,0 +1,74 @@
+// Section title 
+.section-title {
+    margin-bottom: 60px;
+    .subtitle {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        p {
+            font-size: 20px;
+            line-height: 26px;
+            font-family: var(--body-font);
+            font-weight: 700;
+            color: var(--heading-color);
+            margin: 0;
+            margin-right: 10px;
+        }
+        .icon {
+            margin-right: 10px;
+            margin-top: 5px;
+            span {
+                font-size: 12px;
+                color: var(--main-color-one);
+                margin-right: 5px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .title {
+        font-size: 40px;
+        line-height: 55px;
+        font-family: var(--heading-font);
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: center;
+        &.style-01 {
+            text-align: left;
+            color: #fff;
+            margin-bottom: 13px;
+        }
+        &.style-02 {
+            text-align: left;
+        }
+    }
+    .description {
+        font-size: 18px;
+        line-height: 28px;
+        font-family: var(--body-font);
+        font-weight: 500;
+        color: #4F4F6B;
+        text-align: center;
+        &.style-01 {
+            font-size: 16px;
+            line-height: 21px;
+            color: #fff;
+            font-weight: 400;
+            text-align: left;
+        }
+        &.style-02 {
+            text-align: left;
+        }
+    }
+}
+
+.top-rated-title {
+    .title {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 700;
+        font-family: var(--heading-font);
+        margin-bottom: 45px;
+    }
+}

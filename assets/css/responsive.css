@@ -2216,7 +2216,7 @@
         max-width: 150px;
     }
     .btn-wrapper .boxed-btn.btn-poll {
-        display: none;
+        display: block;
     }
     .accoridion-section {
         padding: 95px 0px 105px 0px;

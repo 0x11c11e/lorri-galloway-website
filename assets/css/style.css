@@ -117,7 +117,7 @@ a i {
 }
 
 img {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 ol {
@@ -11270,7 +11270,7 @@ input[type=checkbox] {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0px;
+  bottom: 158px;
   background-color: var(--secondary-color);
   opacity: 0.75;
 }

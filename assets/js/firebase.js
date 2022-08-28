@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -30,13 +29,98 @@ import {
 const db = getDatabase(app);
 
 var joinBtn = document.querySelector("#joinBtn");
-var days = document.querySelector("#days");
+var fname = document.querySelector("#fname");
+var lname = document.querySelector("#lname");
+var email = document.querySelector("#email");
+var telephone = document.querySelector("#telephone");
+var additionalComments = document.querySelector("#additionalComments");
 
 function InsertData() {
-//   set(ref(db, "Volunteer"), {
-//     name: "John Doe",
-//   });
-console.log(days)
+  if(fname.value == "") {
+    fname.style.border = "1px solid red";
+    return false;
+  } else {
+    fname.style.border = "1px solid #ccc";
+  }
+  if (lname.value == "") {
+    lname.style.border = "1px solid red";
+    return false;
+  } else {
+    lname.style.border = "1px solid #ccc";
+  }
+  if (email.value == "") {
+    email.style.border = "1px solid red";
+    return false;
+  } else {
+    email.style.border = "1px solid #ccc";
+  }
+  if (telephone.value == "") {
+    telephone.style.border = "1px solid red";
+    return false;
+  } else {
+    telephone.style.border = "1px solid #ccc";
+  }
+  set(ref(db, "Volunteer/" + uuidv4()), {
+    fname: fname.value,
+    lname: lname.value,
+    email: email.value,
+    telephone: telephone.value,
+    additionalComments: additionalComments.value,
+  });
+  alert("Thank you for your interest in join Lorri's campaign. We will be in touch soon!");
+  fname.value = "";
+  lname.value = "";
+  email.value = "";
+  telephone.value = "";
+  additionalComments.value = "";
 }
 
-joinBtn.addEventListener("click", InsertData);
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+if(joinBtn) {
+  joinBtn.addEventListener("click", InsertData);
+}
+
+var name = document.querySelector("#join-name");
+var email = document.querySelector("#join-email");
+var phone = document.querySelector("#join-phone");
+
+var joinFormBtn = document.querySelector("#join-now");
+
+function InsertJoinData() {
+  if(name.value == "") {
+    name.style.border = "1px solid red";
+    return false;
+  } else {
+    name.style.border = "1px solid #ccc";
+  }
+  if (email.value == "") {
+    email.style.border = "1px solid red";
+    return false;
+  } else {
+    email.style.border = "1px solid #ccc";
+  }
+  if (phone.value == "") {
+      phone.style.border = "1px solid red";
+    return false;
+  } else {
+    phone.style.border = "1px solid #ccc";
+  }
+  set(ref(db, "Join/" + uuidv4()), {
+    name: name.value,
+    email: email.value,
+    phone: phone.value,
+  });
+  alert("Thank you for your interest in join Lorri's campaign. We will be in touch soon!");
+  name.value = "";
+  email.value = "";
+  phone.value = "";
+}
+
+if(joinFormBtn) {
+  joinFormBtn.addEventListener("click", InsertJoinData);
+}
